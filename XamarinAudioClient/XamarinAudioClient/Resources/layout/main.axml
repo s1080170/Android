@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:text="Connect"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonConnect" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="35.0dp"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="    IP  "
+            android:layout_width="38.5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewIpAddress" />
+        <EditText
+            android:id="@+id/editTextIpAddress"
+            android:text="192.168.100.102"
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="    TCP  "
+            android:layout_width="51.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewTcpPort" />
+        <EditText
+            android:id="@+id/editTextTcpPort"
+            android:text="3000"
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <TextView
+            android:text="    UDP  "
+            android:layout_width="50.0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewUdpPort" />
+        <EditText
+            android:id="@+id/editTextUdpPort"
+            android:text="4000"
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="送話"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonTx" />
+        <Button
+            android:text="受話"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonRx" />
+        <Button
+            android:text="再生"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonPlayRec" />
+    </LinearLayout>
+    <Button
+        android:text="Send Data(TCP Only)"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSendData" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSendData"
+        android:background="#00000000"
+        android:text="Send data..." />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout3">
+        <Space
+            android:layout_height="match_parent"
+            android:id="@+id/space1"
+            android:layout_width="319.5dp" />
+        <Button
+            android:text="C"
+            android:id="@+id/buttonLogClear"
+            android:layout_width="52.5dp"
+            android:layout_height="39.5dp"
+            android:layout_marginLeft="0.0dp" />
+    </LinearLayout>
+    <TextView
+        android:text="Audio Control Tcp Client Log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTcpLog" />
+    <TextView
+        android:text="Audio Record/Track UDP Client Log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewUdpLog" />
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewLog">
+        <TextView
+            android:text="Data Stream Log\n"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewLog" />
+    </ScrollView>
+</LinearLayout>
