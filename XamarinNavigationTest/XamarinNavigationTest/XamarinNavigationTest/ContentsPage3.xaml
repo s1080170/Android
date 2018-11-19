@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="XamarinNavigationTest.ContentsPage3">
+
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <maps:Map  x:Name="map"
+                   Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                   MapType="Street"
+        />
+
+        <Slider x:Name="mapSlider"
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                Maximum="18" Minimum="1" Value="1"
+                ValueChanged="OnChangeMapSlider"   
+        />
+       
+        <Button Text="Street"  x:Name="mapStreet"
+                Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"
+                Clicked="OnChangeMapType"                
+        />
+
+        <Button Text="Hybrid"  x:Name="mapHybrid"
+                Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1"
+                Clicked="OnChangeMapType"                
+        />
+
+        <Button Text="Satellite"  x:Name="mapSatellite"
+                Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="1"
+                Clicked="OnChangeMapType"                
+        />
+
+        <Button Text="Position1"  x:Name="geoPosition1"
+                Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"
+                Clicked="OnGetGeoPosition"             
+        />
+
+        <Button Text="Position2"  x:Name="geoPosition2"
+                Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1"
+                Clicked="OnGetGeoPosition"             
+        />
+
+        <Button Text="Position3"  x:Name="geoPosition3"
+                Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1"
+                Clicked="OnGetGeoPosition"             
+        />
+    </Grid>
+
+</ContentPage>
